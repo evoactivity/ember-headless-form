@@ -1,5 +1,11 @@
 # ember-headless-form
 
+## 1.0.0-beta.4
+
+### Patch Changes
+
+- [#147](https://github.com/CrowdStrike/ember-headless-form/pull/147) [`6984523`](https://github.com/CrowdStrike/ember-headless-form/commit/69845235c295e05c27ab873cd0af91feebc799c2) Thanks [@NullVoxPopuli](https://github.com/NullVoxPopuli)! - Upgrade dependency: ember-async-data to 1.0.1
+
 ## 1.0.0-beta.3
 
 ### Patch Changes

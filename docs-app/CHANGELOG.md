@@ -1,5 +1,14 @@
 # docs-app
 
+## 0.0.1-beta.4
+
+### Patch Changes
+
+- [#144](https://github.com/CrowdStrike/ember-headless-form/pull/144) [`c62cc4a`](https://github.com/CrowdStrike/ember-headless-form/commit/c62cc4ae7cf172554debf4e0130b1300cfd2a334) Thanks [@simonihmig](https://github.com/simonihmig)! - Add documentation on updating and resetting form state
+
+- Updated dependencies [[`6984523`](https://github.com/CrowdStrike/ember-headless-form/commit/69845235c295e05c27ab873cd0af91feebc799c2)]:
+  - ember-headless-form@1.0.0-beta.4
+
 ## 0.0.1-beta.3
 
 ### Patch Changes
