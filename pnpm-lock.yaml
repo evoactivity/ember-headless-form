@@ -840,6 +840,9 @@ importers:
 
   test-app:
     devDependencies:
+      '@babel/eslint-parser':
+        specifier: ^7.11.0
+        version: 7.19.1(eslint@7.32.0)
       '@ember/optional-features':
         specifier: ^2.0.0
         version: 2.0.0
@@ -872,7 +875,7 @@ importers:
         version: 1.0.2
       '@nullvoxpopuli/eslint-configs':
         specifier: ^3.0.2
-        version: 3.1.3(@typescript-eslint/eslint-plugin@5.48.1)(@typescript-eslint/parser@5.48.1)(eslint-config-prettier@8.6.0)(eslint-plugin-ember@11.9.0)(eslint-plugin-qunit@7.3.4)(eslint@7.32.0)(prettier@2.8.4)
+        version: 3.1.3(@babel/eslint-parser@7.19.1)(@typescript-eslint/eslint-plugin@5.48.1)(@typescript-eslint/parser@5.48.1)(eslint-config-prettier@8.6.0)(eslint-plugin-ember@11.9.0)(eslint-plugin-qunit@7.3.4)(eslint@7.32.0)(prettier@2.8.4)
       '@tsconfig/ember':
         specifier: ^2.0.0
         version: 2.0.0
@@ -960,9 +963,6 @@ importers:
       '@typescript-eslint/parser':
         specifier: ^5.45.1
         version: 5.48.1(eslint@7.32.0)(typescript@5.0.2)
-      babel-eslint:
-        specifier: ^10.1.0
-        version: 10.1.0(eslint@7.32.0)
       broccoli-asset-rev:
         specifier: ^3.0.0
         version: 3.0.0
@@ -1226,6 +1226,22 @@ packages:
       '@babel/core': 7.20.12(supports-color@8.1.1)
       '@nicolo-ribaudo/eslint-scope-5-internals': 5.1.1-v1
       eslint: 8.34.0
+      eslint-visitor-keys: 2.1.0
+      semver: 6.3.0
+    dev: true
+
+  /@babel/eslint-parser@7.19.1(eslint@7.32.0):
+    resolution: {integrity: sha512-AqNf2QWt1rtu2/1rLswy6CDP7H9Oh3mMhk177Y67Rg8d7RD9WfOLLv8CGn6tisFvS2htm86yIe1yLF6I1UDaGQ==}
+    engines: {node: ^10.13.0 || ^12.13.0 || >=14.0.0}
+    peerDependencies:
+      '@babel/core': '>=7.11.0'
+      eslint: ^7.5.0 || ^8.0.0
+    peerDependenciesMeta:
+      '@babel/core':
+        optional: true
+    dependencies:
+      '@nicolo-ribaudo/eslint-scope-5-internals': 5.1.1-v1
+      eslint: 7.32.0
       eslint-visitor-keys: 2.1.0
       semver: 6.3.0
     dev: true
@@ -6602,7 +6618,7 @@ packages:
       - supports-color
     dev: true
 
-  /@nullvoxpopuli/eslint-configs@3.1.3(@typescript-eslint/eslint-plugin@5.48.1)(@typescript-eslint/parser@5.48.1)(eslint-config-prettier@8.6.0)(eslint-plugin-ember@11.9.0)(eslint-plugin-qunit@7.3.4)(eslint@7.32.0)(prettier@2.8.4):
+  /@nullvoxpopuli/eslint-configs@3.1.3(@babel/eslint-parser@7.19.1)(@typescript-eslint/eslint-plugin@5.48.1)(@typescript-eslint/parser@5.48.1)(eslint-config-prettier@8.6.0)(eslint-plugin-ember@11.9.0)(eslint-plugin-qunit@7.3.4)(eslint@7.32.0)(prettier@2.8.4):
     resolution: {integrity: sha512-55sKdkcewceBRUMoF5HSv5cbHX0ZIHkv6ObpZha0g73U7leR26sGIAO2Vxxnu0fmktwmMVJBjQvq7jpqO0VJ9A==}
     engines: {node: '>= v16.0.0'}
     peerDependencies:
@@ -6630,12 +6646,13 @@ packages:
       prettier:
         optional: true
     dependencies:
+      '@babel/eslint-parser': 7.19.1(eslint@7.32.0)
       '@typescript-eslint/eslint-plugin': 5.48.1(@typescript-eslint/parser@5.48.1)(eslint@7.32.0)(typescript@5.0.2)
       '@typescript-eslint/parser': 5.48.1(eslint@7.32.0)(typescript@5.0.2)
       cosmiconfig: 8.0.0
       eslint: 7.32.0
       eslint-import-resolver-typescript: 3.5.3(eslint-plugin-import@2.27.5)(eslint@7.32.0)
-      eslint-plugin-decorator-position: 5.0.2(eslint@7.32.0)
+      eslint-plugin-decorator-position: 5.0.2(@babel/eslint-parser@7.19.1)(eslint@7.32.0)
       eslint-plugin-ember: 11.9.0(eslint@7.32.0)
       eslint-plugin-import: 2.27.5(@typescript-eslint/parser@5.48.1)(eslint-import-resolver-typescript@3.5.3)(eslint@7.32.0)
       eslint-plugin-json: 3.1.0
@@ -8312,24 +8329,6 @@ packages:
       chalk: 1.1.3
       esutils: 2.0.3
       js-tokens: 3.0.2
-    dev: true
-
-  /babel-eslint@10.1.0(eslint@7.32.0):
-    resolution: {integrity: sha512-ifWaTHQ0ce+448CYop8AdrQiBsGrnC+bMgfyKFdi6EsPLTAWG+QfyDeM6OH+FmWnKvEq5NnBMLvlBUPKQZoDSg==}
-    engines: {node: '>=6'}
-    deprecated: babel-eslint is now @babel/eslint-parser. This package will no longer receive updates.
-    peerDependencies:
-      eslint: '>= 4.12.1'
-    dependencies:
-      '@babel/code-frame': 7.18.6
-      '@babel/parser': 7.20.7
-      '@babel/traverse': 7.20.12(supports-color@8.1.1)
-      '@babel/types': 7.20.7
-      eslint: 7.32.0
-      eslint-visitor-keys: 1.3.0
-      resolve: 1.22.1
-    transitivePeerDependencies:
-      - supports-color
     dev: true
 
   /babel-helper-builder-binary-assignment-operator-visitor@6.24.1(supports-color@8.1.1):
@@ -12864,6 +12863,27 @@ packages:
       - supports-color
     dev: true
 
+  /eslint-plugin-decorator-position@5.0.2(@babel/eslint-parser@7.19.1)(eslint@7.32.0):
+    resolution: {integrity: sha512-wFcRfrB9zljOP1n5udg16h6ITX1jG8cnUvuFVtIqVxw5O9BTOXFHB9hvsTaqpb8JFX2dq19fH3i/ipUeFSF87w==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      '@babel/eslint-parser': ^7.18.2
+      eslint: ^6.0.0 || ^7.31.0 || ^8.0.0
+    peerDependenciesMeta:
+      '@babel/eslint-parser':
+        optional: true
+    dependencies:
+      '@babel/core': 7.22.5(supports-color@8.1.1)
+      '@babel/eslint-parser': 7.19.1(eslint@7.32.0)
+      '@babel/plugin-proposal-decorators': 7.20.7(@babel/core@7.22.5)
+      '@ember-data/rfc395-data': 0.0.4
+      ember-rfc176-data: 0.3.17
+      eslint: 7.32.0
+      snake-case: 3.0.4
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
   /eslint-plugin-decorator-position@5.0.2(@babel/eslint-parser@7.19.1)(eslint@8.34.0):
     resolution: {integrity: sha512-wFcRfrB9zljOP1n5udg16h6ITX1jG8cnUvuFVtIqVxw5O9BTOXFHB9hvsTaqpb8JFX2dq19fH3i/ipUeFSF87w==}
     engines: {node: '>=14'}
@@ -12880,26 +12900,6 @@ packages:
       '@ember-data/rfc395-data': 0.0.4
       ember-rfc176-data: 0.3.17
       eslint: 8.34.0
-      snake-case: 3.0.4
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
-  /eslint-plugin-decorator-position@5.0.2(eslint@7.32.0):
-    resolution: {integrity: sha512-wFcRfrB9zljOP1n5udg16h6ITX1jG8cnUvuFVtIqVxw5O9BTOXFHB9hvsTaqpb8JFX2dq19fH3i/ipUeFSF87w==}
-    engines: {node: '>=14'}
-    peerDependencies:
-      '@babel/eslint-parser': ^7.18.2
-      eslint: ^6.0.0 || ^7.31.0 || ^8.0.0
-    peerDependenciesMeta:
-      '@babel/eslint-parser':
-        optional: true
-    dependencies:
-      '@babel/core': 7.22.5(supports-color@8.1.1)
-      '@babel/plugin-proposal-decorators': 7.20.7(@babel/core@7.22.5)
-      '@ember-data/rfc395-data': 0.0.4
-      ember-rfc176-data: 0.3.17
-      eslint: 7.32.0
       snake-case: 3.0.4
     transitivePeerDependencies:
       - supports-color
